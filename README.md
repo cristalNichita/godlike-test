@@ -66,7 +66,7 @@ npm install
 npm run dev
 ```
 
-Set API base URL in `.env`:
+Set Backend URL in `.env`:
 ```
 VITE_BACKEND_URL=http://localhost:8000
 ```
