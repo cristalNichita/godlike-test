@@ -12,9 +12,11 @@ class GameController extends Controller
 {
     public function __construct(protected GameService $service) {}
 
-    public function index(): JsonResponse
+    public function index(Request $request): JsonResponse
     {
-        return ApiResponse::success($this->service->getAllGames(), 'Games fetched successfully.');
+        $filters = $request->only(['title', 'genre', 'platform']);
+
+        return ApiResponse::success($this->service->getAllGames($filters), 'Games fetched successfully.');
     }
 
     public function store(GameRequest $request): JsonResponse

@@ -20,6 +20,7 @@ class GameRequest extends FormRequest
             'release_date' => 'date|required',
             'platform' => 'string|required',
             'price' => 'numeric|required',
+            'cover_image' => 'nullable|image|max:2048'
         ];
     }
 }

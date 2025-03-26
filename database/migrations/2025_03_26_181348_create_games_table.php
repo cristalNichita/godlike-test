@@ -17,7 +17,9 @@ return new class extends Migration
             $table->string('developer');
             $table->string('genre');
             $table->date('release_date');
+            $table->string('platform');
             $table->decimal('price');
+            $table->string('cover_image')->nullable();
             $table->timestamps();
         });
     }
